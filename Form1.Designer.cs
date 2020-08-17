@@ -40,7 +40,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.Filter = "IQ files|*.iq";
-            this.openFileDialog1.InitialDirectory = "c:\\temp\\iq";
             this.openFileDialog1.Title = "IQ file";
             // 
             // button1

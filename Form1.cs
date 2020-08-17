@@ -51,10 +51,11 @@ namespace CnvIQtoWav
                     bw.Write(data.sChunk.ToCharArray());
                     bw.Write(data.dwChunkSize);
                     BinaryReader br = new BinaryReader(File.Open(infile, FileMode.Open));
-                    for (uint i = 0; i < fileLen; i++)
+                    bw.Write(br.ReadBytes((int)fileLen));
+                    /*for (uint i = 0; i < fileLen; i++)
                     {
                         bw.Write((sbyte)br.ReadSByte());
-                    }
+                    }*/
                     bw.Flush();
                     br.Close();
                     bw.Close();
